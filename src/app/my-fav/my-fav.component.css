@@ -1,0 +1,21 @@
+.example-card {
+    max-width: 500px;
+    width: 100px;
+    margin: 10px;
+  }
+  
+  /* .example-header-image {
+    background-size: cover;
+  } */
+  .container{
+      padding-top: 30px;
+      padding-left: 20px;
+  }
+
+  .mat-icon {
+    font-size: 100px;
+    color:lightgreen;
+  }
+  
+  
+  
