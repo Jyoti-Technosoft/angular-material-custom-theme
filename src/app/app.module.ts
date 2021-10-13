@@ -11,22 +11,23 @@ import { MyAppsComponent } from './my-apps/my-apps.component';
 import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatButtonModule } from '@angular/material/button';
-import {MatGridListModule} from '@angular/material/grid-list';
-import {MatCardModule} from '@angular/material/card';
-import {MatIconModule} from '@angular/material/icon';
-import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list';
-// import { Sidenav } from './sidenav./sidenav..component';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatIconModule } from '@angular/material/icon';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
+import { LayoutModule } from '@angular/cdk/layout';
+import * as Data from '../assets/mydata.json';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
+  exports: [],
   declarations: [
     AppComponent,
     MyFavComponent,
     MyAppsComponent,
     AdminPanelComponent,
-    NavbarComponent,
-    // Sidenav.Component
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +40,9 @@ import {MatListModule} from '@angular/material/list';
     MatCardModule,
     MatIconModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    LayoutModule,
+    FlexLayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]

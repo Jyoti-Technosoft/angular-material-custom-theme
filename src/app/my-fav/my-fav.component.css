@@ -1,21 +1,38 @@
-.example-card {
-    max-width: 500px;
-    width: 100px;
-    margin: 10px;
-  }
-  
-  /* .example-header-image {
-    background-size: cover;
-  } */
-  .container{
-      padding-top: 30px;
-      padding-left: 20px;
-  }
+.content {
+  padding: 16px;
+}
 
-  .mat-icon {
-    font-size: 100px;
-    color:lightgreen;
-  }
-  
-  
-  
+.content > mat-card {
+  width: 100px;
+  height: 180px !important;
+}
+
+.card-container{
+  margin-bottom: 16px;
+}
+
+.image-container{
+  margin-top: 14px;
+}
+.mat-card-image{
+  width: 100%; height: 80%;
+}
+.app-name-contain{
+  display: flex;
+  justify-content: center; 
+  font-size: 15px;
+}
+
+.app-version-contain{
+  display: flex; 
+  justify-content: center; 
+  font-size: 11px;
+}
+
+.download-button-icon{
+  color: #a2cf6e;
+}
+
+.share-button-icon{
+  color:#83c3f7;  
+}

@@ -14,24 +14,116 @@
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$Flexion-primary: mat-palette($mat-light-blue);
-$Flexion-accent: mat-palette($mat-grey, 100, 500, A100);
-
-// The warn palette is optional (defaults to red).
-$Flexion-warn: mat-palette($mat-light-blue);
-
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
-$Flexion-theme: mat.define-light-theme((
-  color: (
-    primary: $Flexion-primary,
-    accent: $Flexion-accent,
-    warn: $Flexion-warn,
+$custom-blue-palette: (
+  50: #e5e7ed,
+  100: #bdc3d1,
+  200: #929bb3,
+  300: #667294,
+  400: #45547d,
+  500: #243666,
+  600: #20305e,
+  700: #1b2953,
+  800: #162249,
+  900: #0d1638,
+  A100: #738bff,
+  A200: #4061ff,
+  A400: #0d36ff,
+  A700: #002af2,
+  contrast: (
+    50: $black-87-opacity,
+    100: $black-87-opacity,
+    200: $black-87-opacity,
+    300: $black-87-opacity,
+    400: $black-87-opacity,
+    500: white,
+    600: white,
+    700: white,
+    800: white,
+    900: white,
+    A100: $black-87-opacity,
+    A200: $black-87-opacity,
+    A400: $black-87-opacity,
+    A700: white,
   )
-));
+ );
+
+ $custom-green-palette: (
+  50: #f1fbf7,
+  100: #dcf4ec,
+  200: #c5eddf,
+  300: #ade5d2,
+  400: #9ce0c9,
+  500: #8adabf,
+  600: #82d6b9,
+  700: #77d0b1,
+  800: #6dcba9,
+  900: #5ac29b,
+  A100: #ffffff,
+  A200: #f6fffc,
+  A400: #c3ffe8,
+  A700: #aaffde,
+  contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: $black-87-opacity,
+        A200: $black-87-opacity,
+        A400: $black-87-opacity,
+        A700: white,
+    )
+);
+
+$custom-lblue-palette:('50': 'f8fbff',
+100: #edf4ff,
+200: #e1edff,
+300: #d5e6ff,
+400: #cce0ff,
+500: #c3dbff,
+600: #bdd7ff,
+700: #b5d2ff,
+800: #aecdff,
+900: #a1c4ff,
+A100: #ffffff,
+A200: #ffffff,
+A400: #ffffff,
+A700: #ffffff,
+contrast: (
+        50: $black-87-opacity,
+        100: $black-87-opacity,
+        200: $black-87-opacity,
+        300: $black-87-opacity,
+        400: $black-87-opacity,
+        500: white,
+        600: white,
+        700: white,
+        800: white,
+        900: white,
+        A100: $black-87-opacity,
+        A200: $black-87-opacity,
+        A400: $black-87-opacity,
+        A700: white,
+    )
+);
+
+$black-87-opacity: rgba(black, 0.87);
+
+$custom-primary: mat-palette($custom-blue-palette, 600);
+$custom-accent:  mat-palette($custom-lblue-palette);
+$custom-warn:  mat-palette($custom-green-palette);
+
+// include the custom theme components into a theme object
+$flexion-theme: mat-light-theme($custom-primary, $custom-accent,$custom-warn );
+
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
-@include mat.all-component-themes($Flexion-theme);
+@include angular-material-theme($flexion-theme);
 
