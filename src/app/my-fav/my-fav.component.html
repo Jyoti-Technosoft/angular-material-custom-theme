@@ -1,20 +1,39 @@
-<div class="container" style="display: flex; flex-direction: row;">
-    <div>
+<!-- <div class="container" >
+  <mat-grid-list cols="6" rowHeight="300px">
+    <mat-grid-tile *ngFor="let list of appList">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Shiba Inu</mat-card-title>
+          <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+            bred for hunting.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+      
+    </mat-grid-tile>  
+  </mat-grid-list>
+
+  <!-- <div>
     <mat-card class="example-card">
-  <!-- <mat-card-header>
-    <mat-card-title>Shiba Inu</mat-card-title>
-    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
-  </mat-card-header> -->
+  
   <mat-icon class="home" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
   <mat-card-content>
     <p>
      Title
     </p>
   </mat-card-content>
-  <!-- <mat-card-actions>
-    <button mat-button>LIKE</button>
-    <button mat-button>SHARE</button>
-  </mat-card-actions> -->
+  
    </mat-card>
 </div>
 
@@ -55,19 +74,27 @@
   </mat-card-content>
   
    </mat-card>
-</div>
+</div> -->
 
-<div>
-    <mat-card class="example-card">
-  
-  <mat-icon class="home" aria-hidden="false" aria-label="Example home icon">home</mat-icon>
-  <mat-card-content>
-    <p>
-     Title
-    </p>
-  </mat-card-content>
-  
-   </mat-card>
-</div>
-   
+<!-- </div> -->
+
+
+<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px">
+    <div class="card-container" fxFlex="12%" fxFlex.xs="80%" fxFlex.sm="28.2%" *ngFor="let list of appList">
+      <mat-card class="mat-elevation-z4">
+        <mat-card-header>
+        </mat-card-header>
+        <div fxLayoutAlign="center" style="margin-top: 14px;">
+          <img mat-card-image src="{{list.image}}"   style="width: 100%; height: 80%;" >
+        </div>
+        <mat-divider inset></mat-divider>
+
+        <mat-card-content>
+          <button></button>
+          <span>{{list.name}}</span>
+        </mat-card-content>
+      </mat-card>
+    </div>
+  </div>
 </div>
