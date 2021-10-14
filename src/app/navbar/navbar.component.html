@@ -14,7 +14,7 @@
     </mat-toolbar>
     
     <mat-sidenav-container>
-        <mat-sidenav #sidenav mode="side" opened class="vertical-menu">
+        <mat-sidenav #sidenav mode="side" opened class="vertical-menu" color="primary">
             <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" >
             <h4 class="name">Prabhat Thakur</h4>
             <p class="designation">Software Engineer</p>
@@ -25,7 +25,7 @@
                 <!-- <a mat-list-item><mat-icon>settings</mat-icon>Admin Panel</a> -->
             </mat-nav-list>
         </mat-sidenav>
-        <mat-sidenav-content style="height: 590px;">
+        <mat-sidenav-content class="sidenav">
             <router-outlet></router-outlet>
         </mat-sidenav-content>
     </mat-sidenav-container>

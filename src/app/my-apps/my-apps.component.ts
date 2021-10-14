@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {default as Data}  from '../../assets/mydata.json';
+import {default as Data}  from '../../assets/appdata.json';
 import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
 import { MyModalComponent } from '../my-modal/my-modal.component';
 
 @Component({
   selector: 'app-my-apps',
   templateUrl: './my-apps.component.html',
-  styleUrls: ['./my-apps.component.css']
+  styleUrls: ['./my-apps.component.scss']
 })
 export class MyAppsComponent implements OnInit {
 

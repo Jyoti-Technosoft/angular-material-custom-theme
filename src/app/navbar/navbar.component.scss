@@ -1,0 +1,139 @@
+
+
+.spacer{
+    flex: 1 1 auto;
+}
+.mat-icon {
+padding-right: 15px;
+}
+// .mat-sidenav {
+
+// }
+.name {
+    margin: 0px;
+    margin-top: 8px;
+    font-weight: normal;
+    text-align: center;
+}
+
+.designation {
+    margin-top: 2px;
+    font-size: 0.7rem;
+    color:black;
+    text-align: center;
+}
+
+.mat-divider {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    background-color: black;
+}
+.avatar {
+    margin-top: 16px;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+.fixed-header {
+    position: sticky;
+    top: 0; 
+    left: 0;
+    z-index: 2;
+    width: 100%  !important;
+}
+/* .mat-side-nav-content {
+    height: 590px;
+} */
+
+.sidenav {
+    height: calc(100vh - 64px);
+    /* min-height: calc(100vh- 64px); */
+}
+
+// @import "~@angular/material/theming";
+
+// @mixin mat-toolbar-color($config-or-theme) {
+//     $config: mat-get-color-config($config-or-theme);
+//     $primary: map-get($config, primary);
+//     $accent: map-get($config, accent);
+//     $warn: map-get($config, warn);
+//     $background: map-get($config, background);
+//     $foreground: map-get($config, foreground);
+  
+//     .mat-toolbar {
+//       background: mat-color($background, app-bar);
+//       color: mat-color($foreground, text);
+  
+//       &.mat-primary {
+//         @include _mat-toolbar-color($primary);
+//       }
+  
+//       &.mat-accent {
+//         @include _mat-toolbar-color($accent);
+//       }
+  
+//       &.mat-warn {
+//         @include _mat-toolbar-color($warn);
+//       }
+  
+//       @include _mat-toolbar-form-field-overrides;
+//     }
+//   }
+  
+//   @mixin mat-toolbar-typography($config-or-theme) {
+//     $config: mat-get-typography-config($config-or-theme);
+//     .mat-toolbar,
+//     .mat-toolbar h1,
+//     .mat-toolbar h2,
+//     .mat-toolbar h3,
+//     .mat-toolbar h4,
+//     .mat-toolbar h5,
+//     .mat-toolbar h6 {
+//       @include mat-typography-level-to-styles($config, title);
+//       margin: 0;
+//     }
+//   }
+
+//   @mixin mat-toolbar-theme($theme-or-color-config) {
+//         @include mat-toolbar-color($color);
+        
+//         @include _mat-toolbar-density($density);
+        
+//         @include mat-toolbar-typography($typography);
+//   }
+
+@mixin sidenav-component-theme($config-or-theme) {
+  // retrieve variables from theme
+  // (all possible variables, use only what you really need)
+  $config: mat-get-color-config($config-or-theme);
+  $primary: map-get($config, primary);
+  $accent: map-get($config, accent);
+  $warn: map-get($config, warn);
+  $background: map-get($config, background);
+  $foreground: map-get($config, foreground);
+
+  .mat-drawer,.mat-sidenav {
+    // let's take mat-toolbar's default theme
+    background: mat-color($background, app-bar);
+    color: mat-color($foreground, text);
+
+    $color-list: (
+      "primary": $primary,
+      "accent": $accent,
+      "warn": $warn,
+    );
+
+    // now, mat-toolbar's colored themes
+    // @each $key, $val in $color-list {
+    //   &[color="#{$key}"] {
+    //     @include mat-toolbar-color($val);
+    //     .mat-list-base {
+    //       .mat-list-item {
+    //         color: mat-color($val, default-contrast);
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
