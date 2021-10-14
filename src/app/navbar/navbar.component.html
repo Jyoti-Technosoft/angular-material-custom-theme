@@ -9,7 +9,7 @@
             <div class="spacer"></div>
             <a mat-button routerLink="/myfav">My Fav</a>
             <a mat-button routerLink="/myapps">My Apps</a>
-            <a mat-button routerLink="/adminpanel">Admin Panel</a>
+            <a matTooltip="Logout" mat-button > <mat-icon>logout</mat-icon></a>
         </mat-toolbar-row>
     </mat-toolbar>
     
@@ -22,7 +22,7 @@
             <mat-nav-list style="width: 200px;">
                 <a mat-list-item><mat-icon>favorite</mat-icon>My Fav</a>
                 <a mat-list-item><mat-icon>apps</mat-icon>My Apps</a>
-                <a mat-list-item><mat-icon>settings</mat-icon>Admin Panel</a>
+                <!-- <a mat-list-item><mat-icon>settings</mat-icon>Admin Panel</a> -->
             </mat-nav-list>
         </mat-sidenav>
         <mat-sidenav-content style="height: 590px;">

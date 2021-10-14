@@ -8,6 +8,7 @@ import {default as Data}  from '../../assets/mydata.json';
 })
 export class MyFavComponent implements OnInit {
 
+  matRippleColor = 'red'
   constructor() { }
   public appList:any= Data;
   ngOnInit(): void {

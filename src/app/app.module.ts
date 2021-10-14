@@ -19,6 +19,10 @@ import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import * as Data from '../assets/mydata.json';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatRippleModule} from '@angular/material/core';
+import {MatTooltipModule} from '@angular/material/tooltip';
+import { MyModalComponent } from './my-modal/my-modal.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 @NgModule({
   exports: [],
@@ -27,7 +31,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MyFavComponent,
     MyAppsComponent,
     AdminPanelComponent,
-    NavbarComponent
+    NavbarComponent,
+    MyModalComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,10 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatSidenavModule,
     MatListModule,
     LayoutModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatRippleModule,
+    MatTooltipModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
