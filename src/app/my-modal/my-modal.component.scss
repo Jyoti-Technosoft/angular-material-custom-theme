@@ -3,3 +3,26 @@
 	justify-content: flex-end;
 
 }
+
+card-container{
+	max-height: 150px !important;
+   }
+   .image-container{
+	 display: flex;
+	 justify-content: center !important;
+   }
+   .img-container{
+	 margin-bottom: 25px !important;
+   
+   }
+   
+   .card-image{
+	 max-width:fit-content;
+   }
+   
+   
+   .mat-dialog-actions{
+	 display: flex;
+	   justify-content: space-between;
+   }
+   

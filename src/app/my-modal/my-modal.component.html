@@ -1,18 +1,51 @@
-<div mat-dialog-title >
+<h2 mat-dialog-title class="modal-title">Install </h2>
+<mat-dialog-content class="modal mat-typography">
+
+      <div class="content">
+        <div fxLayout="row wrap" class="content1" fxLayoutGap="16px">
+          <div class="img-container" fxFlex="10" fxFlex.xs="36%" fxFlex.sm="18.2%" >
+            <mat-card class="mat-elevation-z4" >
+                <img mat-card-image src="{{data.appimage}}" >
+                <mat-card-content style="margin:-40px;">
+                    <!-- <div align="center"> {{data.appversion}}</div> -->
+                  </mat-card-content>
+            </mat-card>
+          </div>
+          <div class="card-container" fxFlex="80" fxFlex.xs="100%" fxFlex.sm="75.2%" >
+           <p>An app's components typically define many views, arranged hierarchically. Angular provides
+                 the Router service to help you define navigation paths among views. The router provides
+                 the Router service to help you define navigation paths among views. The router provides
+                 the Router service to help you define navigation paths among views. The router provides
+                 the Router service to help you define navigation paths among views. The router provides
+                 the Router service to help you define navigation paths among views. The router provides
+                 the Router service to help you define navigation paths among views. The router provides
+                 the Router service to help you define navigation paths among views. The router provides
+                 the Router service to help you define navigation paths among views. The router provides
+                sophisticated in-browser navigational capabilities.</p>
+          </div>
+        </div>
+      </div>
+</mat-dialog-content>
+<mat-dialog-actions >
     <div>
-        {{data.name}}
+        <button mat-icon-button (click)="toggleSelected(data.name,data.appimage,data.appversion)">
+
+            <mat-icon class="favorite" style="color: #FF2626;"
+              *ngIf="selected"
+              aria-label="Example icon-button with a heart icon">
+              favorite
+            </mat-icon>
+            <mat-icon class="favorite_border"
+              *ngIf="!selected"
+              aria-label="Example icon-button with a heart icon">
+              favorite_border
+            </mat-icon>
+            
+          </button>
+    </div>      
+    <div>
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-button [mat-dialog-close]="true" cdkFocusInitial>Install</button>
     </div>
-</div>
-<div mat-dialog-content>
-    Instagram (from Facebook) allows you to create and share your photos, stories, and videos with the friends and followers you care about.
-    Instagram
-    Instagram
-    Instagram
-    Instagram
-    Instagram
-    Instagram
-</div>
-<div mat-dialog-actions class="modal-action">
-    <button mat-button mat-stroked-button mat-dialog-close color="primary">Close</button>
-    <button mat-button mat-raised-button color="primary">Read more</button>
-</div>
+    
+</mat-dialog-actions>
