@@ -1,27 +1,33 @@
 <nav>
     <mat-toolbar color="accent" class="fixed-header">
         <mat-toolbar-row>
-            <span> <img src="../assets/images/Flexion-removebg-preview.png"
-                    style="width: 150px;height: 60px; vertical-align: bottom;"></span>
+            <span> <img src="../assets/images/logo-transprent.png"
+                    style="width: 100px;height: 60px; vertical-align: bottom;"></span>
             <button mat-icon-button (click)="toggleNav(sidenav)">
                 <mat-icon style="margin-left: 30px;">menu</mat-icon>
             </button>
             <div class="spacer"></div>
             <a mat-button routerLink="/myfav">My Fav</a>
             <a mat-button routerLink="/myapps">My Apps</a>
-            <a matTooltip="Logout" mat-button > <mat-icon>logout</mat-icon></a>
+            <a matTooltip="Logout" mat-button>
+                <mat-icon>logout</mat-icon>
+            </a>
         </mat-toolbar-row>
     </mat-toolbar>
-    
+
     <mat-sidenav-container>
         <mat-sidenav #sidenav mode="side" opened class="vertical-menu" color="primary">
-            <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200" >
+            <img class="avatar mat-elevation-z8" src="https://source.unsplash.com/c_GmwfHBDzk/200x200">
             <h4 class="name">Prabhat Thakur</h4>
             <p class="designation">Software Engineer</p>
             <mat-divider></mat-divider>
             <mat-nav-list style="width: 200px;">
-                <a mat-list-item><mat-icon>favorite</mat-icon>My Fav</a>
-                <a mat-list-item><mat-icon>apps</mat-icon>My Apps</a>
+                <a mat-list-item>
+                    <mat-icon>favorite</mat-icon>My Fav
+                </a>
+                <a mat-list-item>
+                    <mat-icon>apps</mat-icon>My Apps
+                </a>
                 <!-- <a mat-list-item><mat-icon>settings</mat-icon>Admin Panel</a> -->
             </mat-nav-list>
         </mat-sidenav>

@@ -8,7 +8,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MyFavComponent } from './my-fav/my-fav.component';
 import { MyAppsComponent } from './my-apps/my-apps.component';
-import { AdminPanelComponent } from './admin-panel/admin-panel.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -18,10 +17,12 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { LayoutModule } from '@angular/cdk/layout';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import {MatRippleModule} from '@angular/material/core';
-import {MatTooltipModule} from '@angular/material/tooltip';
+import { MatRippleModule } from '@angular/material/core';
+import { MatTooltipModule } from '@angular/material/tooltip';
 import { MyModalComponent } from './my-modal/my-modal.component';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { HttpClientModule } from '@angular/common/http';
+import { ConfigService } from './services/config.service';
 
 @NgModule({
   exports: [],
@@ -29,7 +30,6 @@ import {MatDialogModule} from '@angular/material/dialog';
     AppComponent,
     MyFavComponent,
     MyAppsComponent,
-    AdminPanelComponent,
     NavbarComponent,
     MyModalComponent
   ],
@@ -50,8 +50,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatRippleModule,
     MatTooltipModule,
     MatDialogModule,
+    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ConfigService],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }

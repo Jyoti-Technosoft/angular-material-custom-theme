@@ -1,16 +1,15 @@
 import { Component, Inject, OnInit } from '@angular/core';
-import {MatDialog, MatDialogRef, MAT_DIALOG_DATA} from '@angular/material/dialog';
-
+import { MatDialog, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 export interface DialogData {
   appversion: string;
   name: string;
-  appimage:string;
+  appimage: string;
 }
 
 @Component({
   selector: 'app-my-modal',
   templateUrl: './my-modal.component.html',
-  styleUrls: ['./my-modal.component.css']
+  styleUrls: ['./my-modal.component.scss']
 })
 export class MyModalComponent implements OnInit {
 

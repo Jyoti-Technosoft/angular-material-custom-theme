@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {default as Data}  from '../../assets/appdata.json';
+import { default as Data } from '../../assets/appdata.json';
+import { ConfigService } from '../services/config.service';
 
 @Component({
   selector: 'app-my-fav',
@@ -9,11 +10,17 @@ import {default as Data}  from '../../assets/appdata.json';
 export class MyFavComponent implements OnInit {
 
   matRippleColor = 'red'
-  constructor() { }
-  public appList:any= Data;
+  constructor(private config: ConfigService) { }
+  public appList: any = Data;
   ngOnInit(): void {
-    console.log("data",this.appList);
-    
+    this.config.getData()
+      .subscribe((result: any) => {
+
+        this.appList;
+        // console.log(this.appList)
+      });
+    // console.log("data",this.appList);
+
   }
 
 }
